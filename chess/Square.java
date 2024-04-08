@@ -1,10 +1,28 @@
 package chess;
 
-public class Square extends Piece {
-  public Square(PieceColour colour) {}
+public class Square {
+  private boolean hasPiece;
+  private Piece piece;
 
-  @Override
-  public boolean isLegitMove(int i0, int j0, int i1, int j1) {
-    return false;
+  public boolean hasPiece() {
+    return this.hasPiece;
+  }
+
+  public void setPiece(Piece piece) {
+    this.piece = piece;
+    if (this.piece == null) {
+      this.hasPiece = false;
+    } else {
+      this.hasPiece = true;
+    }
+  }
+
+  public Piece getPiece() {
+    return this.piece;
+  }
+
+  public void removePiece() {
+    this.hasPiece = false;
+    this.piece = null;
   }
 }
