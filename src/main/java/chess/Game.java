@@ -24,7 +24,7 @@ public class Game {
       System.out.println("> Enter Origin:");
       String originalPiece = scanner.nextLine();
 
-      if (originalPiece.toLowerCase().equals("end")) {
+      if (originalPiece.equalsIgnoreCase("end")) {
         gameEnd = true;
         break;
       }

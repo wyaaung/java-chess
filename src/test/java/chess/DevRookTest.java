@@ -1,15 +1,15 @@
 package chess;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DevRookTest {
 
-  @Before
-  public void initBoard() {
+  @BeforeAll
+  public static void initBoard() {
     Board.initialiseBoard();
   }
 
@@ -153,7 +153,7 @@ public class DevRookTest {
     Board.setPiece(7, 5, new Bishop(PieceColour.WHITE));
     Board.setPiece(7, 6, new Knight(PieceColour.WHITE));
     Board.setPiece(5, 5, new Rook(PieceColour.WHITE));
-    //Board.printBoard();
+    Board.printBoard();
   }
 
 
