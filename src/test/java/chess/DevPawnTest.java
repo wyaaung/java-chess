@@ -266,8 +266,8 @@ public class DevPawnTest {
   @Test
   public void goodfirstMoveB4() {
     setUpforPawnA();
-    Pawn p = (Pawn) Board.getPiece(1, 5);
-    assertTrue(p.isLegitMove(1, 5, 3, 5));
+    Pawn p = (Pawn) Board.getPiece(1, 4);
+    assertFalse(p.isLegitMove(1, 4, 1, 3));
   }
 
 }
