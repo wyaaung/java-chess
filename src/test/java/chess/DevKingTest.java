@@ -1,6 +1,6 @@
 package chess;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DevKingTest {
 
-  @BeforeAll
-  public static void initBoard() {
+  @BeforeEach
+  public void initBoard() {
     Board.initialiseBoard();
   }
 

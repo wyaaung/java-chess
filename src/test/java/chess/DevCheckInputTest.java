@@ -1,6 +1,6 @@
 package chess;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -10,8 +10,8 @@ public class DevCheckInputTest {
 
   static CheckInput ci;
 
-  @BeforeAll
-  public static void setUp() {
+  @BeforeEach
+  public void setUp() {
     ci = new CheckInput();
   }
 

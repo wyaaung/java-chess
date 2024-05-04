@@ -1,6 +1,6 @@
 package chess;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DevQueenTest {
 
-  @BeforeAll
-  public static void initBoard() {
+  @BeforeEach
+  public void initBoard() {
     Board.initialiseBoard();
   }
 
@@ -114,9 +114,9 @@ public class DevQueenTest {
     Board.setPiece(7, 5, new Bishop(PieceColour.WHITE));
     Board.setPiece(7, 6, new Knight(PieceColour.WHITE));
     Board.setPiece(7, 7, new Rook(PieceColour.WHITE));
-    //Board.printBoard();
   }
 
+  @Test
   public void badMoveWhite0() {
     setUpforQueenB();
     Queen q = (Queen) Board.getPiece(7, 3);
@@ -298,18 +298,21 @@ public class DevQueenTest {
     assertFalse(q.isLegitMove(0, 3, 1, 2));
   }
 
+  @Test
   public void badMoveInitialBlack6() {
     setUpforQueenA();
     Queen q = (Queen) Board.getPiece(0, 3);
     assertFalse(q.isLegitMove(0, 3, 3, 0));
   }
 
+  @Test
   public void badMoveInitialBlack8() {
     setUpforQueenA();
     Queen q = (Queen) Board.getPiece(0, 3);
     assertFalse(q.isLegitMove(0, 3, 1, 5));
   }
 
+  @Test
   public void badMoveInitialBlack10() {
     setUpforQueenA();
     Queen q = (Queen) Board.getPiece(0, 3);
